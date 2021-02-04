@@ -1,0 +1,57 @@
+
+.messages {
+  height: 854px;
+  width: 850px;
+  overflow: hidden;
+  padding: 15px 25px;
+  &:hover {
+    overflow-y: auto;
+  }
+  &::-webkit-scrollbar {
+    background-color: #e3edfd;
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #c6ccd6;
+    border-radius: 0px;
+  }
+
+  .open_dialog_img {
+    margin-top: 200px;
+    text-align: center;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #bdbebf;
+      font-family: "Dancing Script", cursive;
+    }
+  }
+
+  .isloading {
+    text-align: center;
+    margin-top: 30px;
+    svg {
+      font-size: 30px;
+    }
+  }
+  .no_messages {
+    text-align: center;
+    margin-top: 100px;
+    width: 800px;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #bdbebf;
+      font-family: "Dancing Script", cursive;
+    }
+  }
+}
+

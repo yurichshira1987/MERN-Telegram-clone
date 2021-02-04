@@ -1,0 +1,128 @@
+.upload_files_wrapper {
+  position: relative;
+  input {
+    display: none;
+  }
+  label {
+    width: 24px;
+    height: 24px;
+    // border: 1px solid black;
+    cursor: pointer;
+    position: absolute;
+    top: -27px;
+    right: 9px;
+    z-index: 22;
+  }
+}
+
+.uploadFilesModalWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .uploadFilesModal {
+    margin-bottom: 70px;
+    max-width: 335px;
+    max-height: 350px;
+    box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 7px,
+      rgba(101, 119, 134, 0.15) 0px 1px 3px 1px;
+    padding: 7px;
+    border-radius: 6px;
+    background-color: #fff;
+    // background-color: #F4F7FD;
+    .uploadFilesModalTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      div {
+        font-size: 16px;
+        font-weight: 500;
+        color: #36a1d6;
+        margin-left: 6px;
+      }
+      .uploadFilesModalClose {
+        margin-right: 5px;
+        opacity: 0.5;
+        transition-duration: 0.5s;
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+    .files {
+      max-height: 300px;
+
+      overflow-y: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      overflow: hidden;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        background-color: #e3edfd;
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #c6ccd6;
+        border-radius: 0px;
+      }
+      .filesContainer {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+        overflow: hidden;
+        &:hover > img {
+          transform: scale3d(1.05, 1.05, 1.5);
+          cursor: pointer;
+        }
+        &.filesContainerOne {
+          width: 290px !important;
+          height: 290px !important;
+          .videoButton {
+            width: 45px;
+            height: 45px;
+          }
+        }
+        &.filesContainerTwo {
+          width: 158px !important;
+          height: 158px !important;
+        }
+        &.filesContainerThree {
+          width: 156px !important;
+          height: 145px !important;
+        }
+        &.filesContainerFour {
+          width: 156px !important;
+          height: 145px !important;
+        }
+        .file {
+          transition-duration: 1s;
+          max-width: 86%;
+          max-height: 86%;
+          z-index: -1;
+        }
+        .videoButton {
+          position: absolute;
+          transition-duration: 0.7s;
+          width: 20px;
+          height: 20px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

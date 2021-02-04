@@ -1,0 +1,127 @@
+.box{
+  display: flex;
+  margin-top: 10px;
+  
+  
+  .fonts{
+    margin-left: 1px;
+    font-family: 'Dancing Script', cursive;
+    color:#4E8EBF;
+  }
+  .l-9, .l-10, .l-11{
+    font-weight: bold;
+  }
+  
+  .l-1{
+    animation: l1 2s linear 0s infinite normal none;
+  }
+  .l-2{
+    animation: l2 2s linear 0.18s infinite normal none;
+  }
+  .l-3{
+    animation: l3 2s linear 0.36s infinite normal none;
+  }
+  .l-4{
+    animation: l4 2s linear 0.54s infinite normal none;
+  }
+  .l-5{
+    animation: l5 2s linear 0.72s infinite normal none;
+  }
+  .l-6{
+    animation: l6 2s linear 0.90s infinite normal none;
+  }
+  .l-7{
+    animation: l7 2s linear 1.08s infinite normal none;
+  }
+  .l-8{
+    animation: l8 2s linear 1.26s infinite normal none;
+  }
+  .l-9{
+    animation: l9 2s linear 1.44s infinite normal none;
+  }
+  .l-10{
+    animation: l10 2s linear 1.62s infinite normal none;
+  }
+  .l-11{
+    animation: l11 0.8s linear 1.80s infinite normal none;
+  }
+}
+
+
+@keyframes l1{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l2{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l3{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l4{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l5{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l6{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l7{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l8{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l9{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l10{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}
+@keyframes l11{
+  10%{
+    color:#D4D4D4;
+  }
+  100%{
+  }
+}

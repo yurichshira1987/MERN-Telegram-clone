@@ -1,0 +1,189 @@
+a:hover {
+  text-decoration: none;
+}
+
+.dialog {
+  position: relative;
+  color: black;
+  width: 318px;
+  height: 58px;
+  display: inline-flex;
+  padding: 2px 10px;
+  align-items: center;
+  &:hover {
+    background-color: #f7f8f9;
+    cursor: pointer;
+  }
+  &.selected {
+    color: #fff !important;
+    background-color: #4e7ea0;
+    &:hover {
+      background-color: #4e7ea0;
+    }
+    .unReaded {
+      color: #4e7ea0 !important;
+      background-color: #fff !important;
+    }
+    .lastMessage {
+      color: #fff !important;
+    }
+    .date {
+      color: #fff !important;
+    }
+    .online {
+      border: 2px solid #4e7ea0 !important;
+    }
+    .dialodialogInfoTopLeft {
+      svg {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .dialogAvatar {
+    margin-right: 10px;
+  }
+  .dialogInfo {
+    width: 243px;
+    span {
+      display: block;
+    }
+    .dialodialogInfoTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .dialodialogInfoTopLeft {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin: 0 !important;
+          font-size: 18px !important;
+          color: #16aa51;
+        }
+        .userName {
+          margin-left: 3px;
+          overflow: hidden;
+          font-weight: 600;
+          max-width: 186px;
+          max-height: 24px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      .date {
+        font-size: 12px;
+        color: #c1c1c1;
+        font-weight: 400;
+      }
+    }
+    .dialodialogInfoBottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+        .dialogTyping {
+          display: inline-block;
+          margin: 3px 3px 0 5px;
+          height: 100%;
+          .dialogTypingItemWrapper {
+            display: flex;
+            justify-content: center;
+            .dialogTypingItem {
+              margin-right: 3px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background-color:#c1c1c1;
+              &.one{ 
+                animation: dialogTypingItemOne 1s linear 0s infinite normal none;
+              }
+              &.two{ 
+                animation: dialogTypingItemTwo 1.5s linear 0s infinite normal none;
+              }
+              &.three{ 
+                animation: dialogTypingItemThree 2s linear 0s infinite normal none;
+              }
+              @keyframes dialogTypingItemOne {
+                50% { transform: scale(1.6);}
+                100% { transform: scale(1); }
+              }
+              @keyframes dialogTypingItemTwo {
+                50% { transform: scale(1.6);}
+                100% { transform: scale(1); }
+              }
+              @keyframes dialogTypingItemThree {
+                50% { transform: scale(1.6);}
+                100% { transform: scale(1); }
+              }
+            }
+          }
+        }
+
+      .lastMessage {
+        align-items: center;
+        display: flex;
+        width: 100%;
+        max-height: 24px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #a6a6a6;
+        font-size: 14.3px;
+        white-space: nowrap;
+      }
+      span:nth-child(2) {
+        padding: 1px;
+        background-color: #40a7e3;
+        border-radius: 30px;
+        .unReaded {
+          text-align: center;
+          line-height: 19px;
+          display: block;
+          min-width: 19px;
+          height: 19px;
+          border-radius: 10px;
+          font-size: 11px;
+          color: white;
+          font-weight: 600;
+          font-size: 9px;
+        }
+      }
+    }
+  }
+  .online {
+    position: absolute;
+    padding: 5.2px;
+    border-radius: 50%;
+    background-color: #00c886;
+    border: 2px solid #ffff;
+    left: 40px;
+    bottom: 10px;
+  }
+}
+
+// .dialogTyping {
+//   display: inline-block;
+//   margin: 4px 3px 0 5px;
+//   height: 100%;
+//   .dialogTypingItemWrapper {
+//     display: flex;
+//     justify-content: center;
+//     .dialogTypingItem {
+//       margin-right: 3px;
+//       width: 5px;
+//       height: 5px;
+//       border-radius: 50%;
+//       background-color: #fff;
+//       animation: dialogTypingItem 2s linear 0s infinite normal none;
+//       @keyframes dialogTypingItem {
+//         50% {
+//           transform: scale(1.6);
+//         }
+//         100% {
+//           transform: scale(1);
+//         }
+//       }
+//     }
+//   }
+// }

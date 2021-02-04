@@ -1,0 +1,5 @@
+{
+    "jwtKey":"secret_key",
+    "urlMongoDb":"mongodb://localhost:27017/clone-telegram",
+    "urlServer":"5000"
+}

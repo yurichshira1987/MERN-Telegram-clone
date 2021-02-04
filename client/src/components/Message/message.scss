@@ -1,0 +1,188 @@
+.message {
+  z-index: 10;
+  .messageWrapper {
+    display: flex;
+    padding-bottom: 5px;
+    width: 800px;
+    position: relative;
+    .messageContentWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .ellipsisMessage {
+      z-index: 10;
+      font-size: 17px;
+      opacity: 0.4;
+      transition-duration: 0.5s;
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+    .ellipsisMessageWrapper {
+      position: relative;
+      .ellipsisMessageModal {
+        opacity: 0;
+        position: absolute;
+        min-width: 100px;
+        padding: 0;
+        margin: 0;
+        box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 7px,
+          rgba(101, 119, 134, 0.15) 0px 1px 3px 1px;
+        border-radius: 3px;
+        right: -80px;
+        top: 50px;
+        z-index: 100;
+        background-color: #fff;
+        animation: ellipsisMessageModal 0.2s linear 0s 1 forwards;
+        &.ElMessPartner{
+          right: -5px!important;
+        }
+        @keyframes ellipsisMessageModal {
+          100% {
+            top: 30px;
+            opacity: 1;
+          }
+        }
+      }
+      li {
+        text-align: center;
+        padding: 5px;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: sans-serif;
+        &:hover {
+          cursor: pointer;
+          background-color: #f7f8f9;
+        }
+      }
+    }
+    .avatarMessage {
+      margin: 5px 13px 0 0;
+    }
+    .messageHeader {
+      div {
+        display: inline-block;
+      }
+      div:nth-child(1) {
+        margin-right: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #4e7ea0;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .messageText {
+      box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 7px;
+      padding: 5px 10px;
+      display:inline-block ;
+      background-color: #fff;
+      margin: 0;
+      font-size: 15px;
+      border-radius: 5px;
+      max-width: 450px;
+      word-break: break-all;
+    }
+    .messageTextChangeInput {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      border-bottom: 1px solid #f4f7fd;
+      outline: none;
+      width: 450px;
+      transition-duration: 0.1s;
+      &:focus {
+        border-bottom: 2px solid #36a1d6;
+        //box-shadow: 0 0 0 3px #b7d8e9;
+      }
+    }
+    .messageTextChangeItems {
+      span {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 13px;
+        cursor: pointer;
+        opacity: 0.5;
+        transition-duration: 0.5s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .attachments {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .dateAndReaded {
+      font-size: 11px;
+      display: inline-block;
+      margin: 5px 0 0 0;
+      color: black;
+      opacity: 0.8;
+    }
+  }
+
+  &.isMe {
+    .ellipsisMessageModal {
+      right: 700px;
+    }
+    .messageWrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 800px;
+      .messageContentWrapper {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .avatarMessage {
+        margin: 5px 0 0 13px;
+      }
+      .messageHeader {
+        display: flex;
+        flex-direction: row-reverse;
+        div {
+          display: inline-block;
+        }
+        div:nth-child(1) {
+          margin: 0 0 0 10px;
+          font-weight: 600;
+        }
+      }
+      .messageTextWrapper{
+        text-align: end;
+      .messageText {
+        text-align: end;
+      }
+    }
+      .messageTextChangeItems {
+        text-align: end;
+      }
+      .attachments {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .dateAndReaded {
+        position: relative;
+        display: inline-block;
+        .readedItem {
+          position: absolute;
+          left: -34px;
+          top: -6px;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.dialogs{
+  height: 815px;
+    .no_dialogs{
+      text-align: center;
+      margin-top: 100px;
+      img{
+        width: 150px;
+        height: 150px;
+      }
+      p{
+        margin-top: 10px;
+        font-size: 20px;
+        color: #BDBEBF;
+        font-family: 'Dancing Script', cursive;
+      }
+    }
+
+    overflow: hidden;
+    height:815px ;
+    svg{
+      font-size: 39px;
+      display: inline-block;
+      margin: 100px 140px 0;
+    }
+    &:hover{
+      overflow-y: auto;
+    }
+    &::-webkit-scrollbar{
+      background-color: #E3EDFD;
+      width: 3px;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 0px;
+      background-color:#C6CCD6 ;
+    }
+  }

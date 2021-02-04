@@ -1,0 +1,166 @@
+html body{
+  height: 100%;
+  outline: none;
+}
+body{
+  background-color: #F4F7FD;
+}
+
+.auth{
+  h4{
+    margin-top: 170px;
+    text-align: center;
+    font-size: 33px;
+  }
+  p{
+    text-align: center;
+    font-size: 20px;
+    color:#909082;
+    margin-bottom: 39px;
+  }
+}
+.registr{
+  h4{
+    margin-top: 170px;
+    text-align: center;
+    font-size: 33px;
+  }
+  p{
+    text-align: center;
+    font-size: 20px;
+    color:#909082;
+    margin-bottom: 39px;
+  }
+  h4{
+    margin-top: 100px;
+  }
+}
+.startBlock{
+  box-shadow: 0 0 11px 1px #DDDDDD;
+  max-width: 570px;
+  min-height: 430px;
+  margin: auto; 
+  .form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .inp{
+      position: relative;
+      margin-bottom: 30px;
+      .error{
+        transition-duration: 0.4s;
+        color: red;
+        position: absolute;
+        left:13px;
+        top:55px;
+
+      }
+      .showError{
+        animation: showErr 0.3s linear 1 normal forwards;  
+      }
+      .hideError{
+        animation: hideErr 0.6s linear 1 normal forwards;  
+      }
+    }
+    .inp:nth-child(1){
+      margin-top: 60px;
+    }
+
+    input{
+      z-index: 10;
+      padding: 15px 20px;
+      border-radius: 6px;
+      border: 1px solid #EAEAEA;
+      width: 450px;
+      font-size: 20px;
+      outline:none;
+      transition-duration: 0.3s;
+
+    }
+    input:focus{
+      border-color: #30ACFB;
+      box-shadow: 0 0 0 3px #CCEAFE ; 
+    }
+    .redBorder{
+      border-color: red!important;
+    }
+    .redBox{
+      box-shadow: 0 0 0 3px #FFDBDC!important ; 
+    }
+    i{
+      position: absolute;
+      right: 22px;
+      top:23px;
+      transition-duration: 0.6s;
+      display:none;
+      font-size: 15px;     
+    }
+    .fa-times-circle{
+      color: red;
+    }
+    .fa-check-circle{
+      color: #6FBE50;
+    }
+    .showIcon{
+      animation: showIcon 0.2s linear 1 normal forwards;
+      display: block!important;
+    }
+  }
+
+  button{
+    padding: 20px;
+    width: 450px;
+    background-color: #419FD9;
+    color:#FFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    margin-top: 20px;
+    outline:none;
+    box-shadow: 3px 3px 11px #4367D4;
+  }
+  button:hover{
+    background-color: #4DBEF6;
+  }
+  a{
+    text-decoration: none;
+    p{
+      color: #419FD9;
+      font-size: 19px;
+      margin-top: 18px;
+    }
+  }
+}
+
+@keyframes showErr{
+ 
+ 100%{
+  opacity: 1;
+  top:62px;
+ }
+}
+@keyframes hideErr{
+ 35%{
+  opacity: 0;
+ }
+  100%{
+   opacity: 0;
+   top:57px;
+  }
+ }
+@keyframes showIcon{   
+   70%{
+    font-size: 23px;
+   }
+   100%{
+    font-size: 20px;
+   }
+ }
+
+
+
+

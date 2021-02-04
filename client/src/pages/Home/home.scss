@@ -1,0 +1,291 @@
+.home {
+  margin: 10px 0 0 10px;
+  position: relative;
+  .chat {
+    position: relative;
+    display: flex;
+    max-width: 1170px;
+    margin: auto;
+    .modalWrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // z-index: 9;
+      position: absolute;
+      top:23%;
+      left: 43%;
+      width: 500px;
+      height: 500px;
+      // border:1px solid black;
+    }
+    .rightBlock {
+      background: url('../../assets/img/oboi8.png');
+      background-size:cover;
+      position: relative;
+      border: 1px solid #c2c5cc;
+      .backGroundStart {
+        position: absolute;
+        border-radius: 0px;
+        width: 850px;
+        height: 890px;
+        top: 70px;
+        z-index: 4;
+      }
+      background-color: #fff;
+      height: 950px;
+
+      .rightBlockHeader {
+        background-color: #fff;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #c2c5cc;
+        height: 45px;
+        z-index: 5;
+        .findIconModalWrapper {
+          position: absolute;
+          left: 18px;
+          top: 13px;
+          svg {
+            font-size: 23px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+        .status {
+          height: 40px;
+          padding: 3px 0;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          .statusName {
+            font-size: 13px;
+            font-weight: 400;
+          }
+          .online {
+            position: relative;
+            line-height: 10px;
+            span:nth-child(2) {
+              font-size: 11px;
+              color: #c5c5c5;
+              padding-left: 15px;
+            }
+            span:nth-child(1) {
+              position: absolute;
+              height: 10px;
+              width: 10px;
+              border-radius: 50%;
+              background: #00c886;
+              left: 1px;
+              top: 3px;
+            }
+          }
+          .datePartnerLastSeen {
+            opacity: 0.6;
+            font-size: 13px;
+            font-weight: 200;
+          }
+        }
+
+        .ellipsisWrapper {
+          position: absolute;
+          right: 16px;
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          border-radius: 50%;
+          .ellipsis{
+            position: relative;
+          }
+          svg {
+            color:#4E7EA0;
+            font-size: 27px;
+            opacity: 0.7;
+            transition-duration: 0.5s;
+            &:hover {
+              opacity: 1;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .leftBlock {
+      background-color: #ffff;
+      width: 320px;
+      height: 950px;
+      border-top: 1px solid #c2c5cc;
+      border-left: 1px solid #c2c5cc;
+      border-bottom: 1px solid #c2c5cc;
+      .usersOnline{
+        opacity: 0.7;
+        font-size: 12px;
+        margin:10px 0 0 30px;
+        .usersOnlineNumber{
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .usersOnlineItem{
+          margin: 0 5px 0 0;
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          padding: 5px;
+          border-radius: 50%;
+          background-color: #16AA51;
+          animation: usersOnlineItem 2s linear 0s infinite normal none;
+          @keyframes usersOnlineItem {
+            50% { transform: scale(1.6);}
+            100% { transform: scale(1); }
+          }
+        }
+      }
+      .leftBlockHeader {
+        background-color: #fff;
+        width: 100%;
+        border-bottom: 1.4px solid #c2c5cc;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 10px;
+        .leftBlockHeaderRight {
+          // position: relative;
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          &:hover {
+            background-color: #F7F8F9;
+            cursor: pointer;
+            transition-duration: 0.5s;
+          }
+          .userName {
+            max-width: 192px;
+            text-align: end;
+            font-size: 12px;
+            font-weight: 600;
+            height: 20px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+          .avatar {
+            width: 40px !important;
+            height: 40px !important;
+            img {
+              width: 30px !important;
+              height: 30px !important;
+            }
+          }
+          .iconAvatar {
+            svg {
+              font-size: 8px !important;
+              // color: #fff;
+            }
+          }
+        }
+        .findIconModalWrapper {
+          display: flex;
+          align-items: center;
+          margin-left: 11px;
+          svg {
+            font-size: 23px;
+            color: #2d5c80;
+            opacity: 0.5;
+            transition-duration: 0.5s;
+            &:hover {
+              opacity: 1;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .leftBlockSearch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0 20px;
+        position: relative;
+        height: 75px;
+        input {
+          transition-duration: 0.4s;
+
+          border-radius: 30px;
+          outline: none;
+          border: 1px solid #f4f7fd;
+          width: 290px;
+          padding: 6px 6px 6px 29px;
+          font-size: 14px;
+          color: black;
+          &::placeholder {
+            font-size: 14px;
+            opacity: 0.5;
+            font-weight: 100;
+          }
+          &:focus {
+            border: 1px solid #36a1d6;
+          }
+        }
+        svg {
+          position: absolute;
+          color: #d6d7d8;
+          left: 24px;
+          bottom: 33px;
+        }
+      }
+    }
+  }
+
+ 
+
+  .findModalWrapper {
+    position: relative;
+    z-index: 10;
+    .findModals {
+      opacity: 0;
+      left: 1px;
+      top: 1px;
+      height: 1px;
+      width: 1px;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #fff;
+      position: absolute;
+      z-index: 330;
+      box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 7px,
+        rgba(101, 119, 134, 0.15) 0px 1px 3px 1px;
+      animation: findModal 0.2s linear 0s 1 forwards;
+      @keyframes findModal {
+        100% {
+          opacity: 1;
+          width: 200px;
+          height: 100px;
+          left: 50px;
+          top: 53px;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin: 0;
+        cursor: pointer;
+        font-family: sans-serif;
+        font-weight: 600;
+        padding: 5px 0 5px 10px;
+        transition-duration: 0.3s;
+        svg {
+          margin: 0 5px 4px 0;
+          font-size: 17px;
+          // color:#36A1D6;
+        }
+        &:hover {
+          background-color: #f7f8f9;
+        }
+      }
+    }
+  }
+}
